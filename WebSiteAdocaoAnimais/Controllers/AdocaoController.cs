@@ -117,8 +117,9 @@ namespace WebSiteAdocaoAnimais.Controllers
                 {
                     ModelState.AddModelError("", "O usuário logado não foi encontrado, cadastre um novo usuário e realize o login para prosseguir com a operação!");
                 }
+                else
+                    adocaoViewModel.UsuarioId = usuarioLogado.UsuarioId;
 
-                adocaoViewModel.Usuario = Mapper.Map<Usuario, UsuarioViewModel>(usuarioLogado);
                 adocaoViewModel.DataHoraCadastro = DateTime.Now;
 
                 if (adocaoViewModel.AdocaoSituacaoId <= 0)
