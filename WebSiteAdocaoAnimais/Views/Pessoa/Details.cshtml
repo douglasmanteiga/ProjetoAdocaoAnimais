@@ -1,0 +1,57 @@
+﻿@model WebSiteAdocaoAnimais.Models.PessoaViewModel
+
+@{
+    ViewBag.Title = "Consultar Pessoa";
+}
+
+<center><h2>Consultar Pessoa</h2></center>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataHoraCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataHoraCadastro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PessoaId }, new { @class = "btn btn-primary", @id = "btnEditar" }) |
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default", @id = "btnVoltar" })
+</p>

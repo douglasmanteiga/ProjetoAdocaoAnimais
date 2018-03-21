@@ -1,0 +1,68 @@
+﻿@model IEnumerable<WebSiteAdocaoAnimais.Models.AdocaoViewModel>
+
+@{
+    ViewBag.Title = "Gerenciar Adoções";
+}
+
+<center><h2>Gerenciar Adoções</h2></center>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create", new { area = "" }, new { @class = "btn btn-success", @id = "btnCadastrar" })
+</p>
+<table id="tableGeral" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAdocao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdocaoSituacaoId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PessoaId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnimalId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHoraCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataAdocao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdocaoSituacao.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pessoa.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Animal.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataHoraCadastro)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.AdocaoId }, new { @class = "btn btn-primary", @id = "btnEditar" })
+                    @Html.ActionLink("Exibir", "Details", new { id = item.AdocaoId }, new { @class = "btn btn-warning", @id = "btnExibir" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.AdocaoId }, new { @class = "btn btn-danger", @id = "btnExcluir" })
+
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/scripts/login/login.js"></script>
+<link href="~/Content/login.css" rel="stylesheet" type="text/css" />
+
+<center>
+    <div class="container">
+        <div class="col-lg-4 col-md-3 col-sm-2"></div>
+        <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="row loginbox">
+                <div class="col-lg-12">
+                    <span class="singtext">Entrar</span>
+                </div>
+                <form>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <input id="txtLogin" class="form-control" type="text" placeholder="Usuário">
+                    </div>
+                    <div class="col-lg-12  col-md-12 col-sm-12">
+                        <input id="txtSenha" class="form-control" type="password" placeholder="Senha">
+                    </div>
+                    <div class="col-lg-12  col-md-12 col-sm-12">
+                        <button id="btnLogin" class="btn submitButton">Acessar</button>
+                    </div>
+                </form>
+                <a href="/Usuario/CreateUsuarioNaoLogado">Primeiro Acesso? Clique aqui!</a>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div id="falhaLogin" class="row">
+        <div id="mensagemErro" class="alert alert-danger"></div>
+    </div>
+</center>

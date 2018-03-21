@@ -1,0 +1,65 @@
+﻿@model WebSiteAdocaoAnimais.Models.AdocaoViewModel
+
+@{
+    ViewBag.Title = "Consultar Adoção";
+}
+
+<center><h2>Consultar Adoção</h2></center>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAdocao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAdocao)
+        </dd>        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdocaoSituacaoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdocaoSituacao.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PessoaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pessoa.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnimalId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Animal.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsuarioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuario.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataHoraCadastro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataHoraCadastro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.AdocaoId }, new { @class = "btn btn-primary", @id = "btnEditar" }) |
+    @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-default", @id = "btnVoltar" })
+</p>

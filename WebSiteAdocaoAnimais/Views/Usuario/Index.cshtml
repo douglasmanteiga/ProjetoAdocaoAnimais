@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebSiteAdocaoAnimais.Models.UsuarioViewModel>
+
+@{
+    ViewBag.Title = "Gerenciar Usuários";
+}
+
+<center><h2>Gerenciar Usuários</h2></center>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create", new { area = "" }, new { @class = "btn btn-success", @id = "btnCadastrar" })
+</p>
+@*<table class="table">*@
+<table id="tableGeral" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Login)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Senha)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+                <td>
+                    ******
+                    @*@Html.DisplayFor(modelItem => item.Senha)*@
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.UsuarioId }, new { @class = "btn btn-primary", @id = "btnEditar" })
+                    @Html.ActionLink("Exibir", "Details", new { id = item.UsuarioId }, new { @class = "btn btn-warning", @id = "btnExibir" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.UsuarioId }, new { @class = "btn btn-danger", @id = "btnExcluir" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

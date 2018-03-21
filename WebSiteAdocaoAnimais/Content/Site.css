@@ -1,0 +1,96 @@
+﻿body {
+    
+    padding-top: 50px;
+    /*padding-bottom: 900px;*/
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+input[type=text] {
+    width: 280px;    
+}
+
+input[type=password] {
+    width: 280px;
+}
+
+#btnCadastrar
+{
+    width: 90px;
+}
+
+#btnSalvar {
+    width: 70px;
+}
+
+#btnEditar{
+    width: 70px;
+}
+
+#btnExibir {
+    width: 70px;
+}
+
+#btnExcluir {
+    width: 70px;   
+}
+
+#btnVoltar
+{
+    width: 70px;
+}
+
+th {
+    background-color: #f5f5f5;
+    color: #000000;
+}
+/*tr:nth-child(even) {background-color: #f2f2f2;} - linha zebrada */ 
+tr:hover {background-color: #fcfcfc}
+
+/*#thDataHora
+{
+    width: 160px;
+}
+#thAmigo
+{
+    width: 150px;
+}
+#thEmprestimo
+{
+    width: 120px;
+}
+#thDevolucao
+{
+    width: 120px;
+}
+#thSituacao
+{
+    width: 110px;
+}
+#thJogo
+{
+    width: 100px;
+}
+#thUsuario
+{
+    width: 100px;
+}*/
+
+/*input[type="submit"] {
+    width: 300px;
+    margin-left: 35px;
+    display: block;
+}*/
+
+/* centered columns styles */
+/*.row-centered {
+    text-align:center;
+}
+.col-centered {
+    border: 1px solid #ddd;
+}*/

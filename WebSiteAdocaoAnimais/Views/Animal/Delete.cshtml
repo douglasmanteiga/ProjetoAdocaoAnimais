@@ -1,0 +1,70 @@
+﻿@model WebSiteAdocaoAnimais.Models.AnimalViewModel
+
+@{
+    ViewBag.Title = "Excluir Animal";
+}
+
+<center><h2>Excluir Animal</h2></center>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Raca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Raca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SexoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AnimalSexo.Sexo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Peso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Peso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataEntrada)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-actions no-color">
+            <input id="btnExcluir" type="submit" value="Excluir" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar", "Index", "", new { @class = "btn btn-default", @id = "btnVoltar" })
+        </div>
+    }
+</div>

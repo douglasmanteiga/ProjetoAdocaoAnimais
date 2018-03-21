@@ -1,0 +1,11 @@
++ Requisitos funcionais:
+
+- RF001: O sistema deve possibilitar o cadastro de pessoas
+- RF002: O sistema deve possibilitar o cadastro de animais
+- RF003: O sistema deve possibilitar o cadastro de usuários
+- RF004: O sistema deve possibilitar o cadastro de adoções de animais, onde o usuário deverá informar a pessoa que o adotou
+
++ Requisitos não funcionais:
+
+- RNF005: Tempo de resposta do sistema não deve ultrapassar 20 segundos;
+- RNF006: O banco de dados usado deverá ser SQL Server;

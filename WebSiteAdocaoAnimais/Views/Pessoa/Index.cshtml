@@ -1,0 +1,61 @@
+﻿@model IEnumerable<WebSiteAdocaoAnimais.Models.PessoaViewModel>
+
+@{
+    ViewBag.Title = "Gerenciar Pessoas";
+}
+
+<center><h2>Gerenciar Pessoas</h2></center>
+
+<p>
+    @Html.ActionLink("Cadastrar", "Create", new { area = "" }, new { @class = "btn btn-success", @id = "btnCadastrar" })
+</p>
+<table id="tableGeral" class="table table-striped" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RG)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataHoraCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RG)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CPF)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataHoraCadastro)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.PessoaId }, new { @class = "btn btn-primary", @id = "btnEditar" })
+                    @Html.ActionLink("Exibir", "Details", new { id = item.PessoaId }, new { @class = "btn btn-warning", @id = "btnExibir" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.PessoaId }, new { @class = "btn btn-danger", @id = "btnExcluir" })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

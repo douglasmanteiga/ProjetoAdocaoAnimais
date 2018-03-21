@@ -1,0 +1,4 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+<center><h3>Bem Vindo @(Request.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Nenhum")</h3></center>
